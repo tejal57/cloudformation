@@ -28,7 +28,6 @@ Resources:
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
-    DependsOn: VPC
     Properties:
       Tags:
         - Key: Name
@@ -84,7 +83,7 @@ Resources:
         - Key: Name
           Value: privatesubnet    
 
-   PrivateRouteTable:
+  PrivateRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId: !Ref VPC
