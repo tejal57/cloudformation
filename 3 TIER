@@ -5,12 +5,12 @@ Parameters:
     Type: String
 
   PublicSubnetCIDR:
-    Default: 10.0.1.0/24
+    Default: 10.0.0.0/17
     Description: "Specify the CIDR block for the public subnet"
     Type: String
 
   PrivateSubnetCIDR:
-    Default: 10.0.2.0/24
+    Default: 10.0.128.0/17
     Description: "Specify the CIDR block for the private subnet"
     Type: String
 
