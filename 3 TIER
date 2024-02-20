@@ -5,12 +5,12 @@ Parameters:
     Type: String
 
   PublicSubnetCIDR:
-    Default: 10.0.1.0/24
+    Default: 10.0.0.0/17
     Description: "Specify the CIDR block for the public subnet"
     Type: String
 
   PrivateSubnetCIDR:
-    Default: 10.0.2.0/24
+    Default: 10.0.128.0/17
     Description: "Specify the CIDR block for the private subnet"
     Type: String
 
@@ -28,7 +28,6 @@ Resources:
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
-    DependsOn: VPC
     Properties:
       Tags:
         - Key: Name
@@ -84,7 +83,7 @@ Resources:
         - Key: Name
           Value: privatesubnet    
 
-   PrivateRouteTable:
+  PrivateRouteTable:
     Type: AWS::EC2::RouteTable
     Properties:
       VpcId: !Ref VPC
