@@ -1,0 +1,12 @@
+Type: AWS::EC2::Instance
+Properties:
+  InstanceType: t3.micro
+  ImageId: ami-02d3fd86e6a2f5122 
+  KeyName: c.key
+  SecurityGroups: 
+    - launch-wizard-3
+  Tags: 
+    - Key: Name 
+      Value: teja
+
+  
